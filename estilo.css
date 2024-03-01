@@ -1,0 +1,11 @@
+/*CSS EXTERNO*/
+
+body{
+    text-align: center;
+}
+
+/*DIV ID */
+#cabecalho{
+    height: 300px;
+    background-color: chocolate;
+}
