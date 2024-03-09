@@ -4,30 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navegação</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulario</title>
 </head>
 
 <body>
-    
-    <header id="colorido">
-        <h1>Palmeiras maior do Brasil</h1>
-        <nav>
-            <ul><!-- Lista -->
-            <li><a href=""> Home</a><a</li> <!-- Lista -->
-            <li><a href="">Campeonatos</a></li>
-            <li><a href="">Vitorias</a></li>
-            </ul>
-            <figure>
-                <img src="https://sep-bucket-prod.s3.amazonaws.com/wp-content/uploads/2021/12/libertadores-2021-hotsite-2.jpg" alt="">
-            </figure>
-            <ul><!-- Lista -->
-                <li><a href="#"> Home</a><a</li> <!-- Lista -->
-                <li><a href="#">Campeonatos</a></li>
-                <li><a href="#">Vitorias</a></li>
-            </ul>
-        </nav>
-    </header>
+
+    <div>
+        <h1 id="titulo">Formulario de Inscrição</h1>
+    </div>
+
+    <form>
+        <fieldset>
+
+            <div>
+                <br> <br> <label><strong>Nome Completo</strong></label>
+                <input type="text" nome="nome" id="nome">
+            </div>
+
+            <div>
+                <br> <label><strong>Endereço</strong></label>
+                <input type="text" nome="Endereço" id="Endereço">
+            </div>
+
+            <div>
+                <br> <label><strong>Tipo de Incrição!</strong></label>
+                <select id="tipo de incrição">
+                    <option>Participante</option>
+                    <option>Palestrante</option>
+                    <option>Volutario</option>
+                </select>
+
+                <div>
+                    <br> <input type="checkbox" id="Aceitar Termos" value="Aceito os termos">
+                    <br> <label><strong>Aceito os termos e condições</strong></label> <br>
+
+                </div>
+
+        </fieldset>
+
+        <br> <button class="botao" type="submit">Increva-se</button>
+
+    </form>
+
 </body>
 
 </html>
