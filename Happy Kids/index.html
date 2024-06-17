@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Kids</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="menu-container" id="menu-container">
+        <h1>Happy Kids</h1>
+        <button id="start-game">Iniciar Jogo</button>
+        <button id="credits">Créditos</button>
+        <button id="exit">Sair</button>
+    </div>
+
+    <div class="game-container" id="game-container" style="display:none;">
+        <h1>Qual é o Objeto/Animal?</h1>
+        <img id="object-image" src="" alt="Object Image">
+        <div class="options-container">
+            <button class="option" id="option1"></button>
+            <button class="option" id="option2"></button>
+            <button class="option" id="option3"></button>
+            <button class="option" id="option4"></button>
+        </div>
+        <p id="result-message"></p>
+    </div>
+
+    <div class="credits-container" id="credits-container" style="display:none;">
+        <h1>Créditos</h1>
+        <div class="credit">
+            <img src="naama.jpg" alt="Foto de Naamã Setogutte Loureiro">
+            <p>Nome: Naamã Setogutte Loureiro<br>RA: 23015495-2</p>
+        </div>
+        <div class="credit">
+            <img src="https://media-gru1-2.cdn.whatsapp.net/v/t61.24694-24/406268459_1361507614733732_291622236452715296_n.jpg?ccb=11-4&oh=01_Q5AaICrVfm45E7wKvkvYBtaO2JHzawjq1p-tnOa5KDPyJAwF&oe=667C4807&_nc_sid=e6ed6c&_nc_cat=104" alt="Foto de Lucas Frediani De Lima">
+            <p>Nome: Lucas Frediani De Lima<br>RA: 23094780-2</p>
+        </div>
+        <div class="credit">
+            <img src="https://media-gru1-2.cdn.whatsapp.net/v/t61.24694-24/390145005_874130850820367_1764475922697564611_n.jpg?ccb=11-4&oh=01_Q5AaIPztbzY1Z_BtMROfzbYJfv61MPTavZg82qQzJ70eHKYn&oe=667C5E29&_nc_sid=e6ed6c&_nc_cat=111" alt="Foto de Gabriel Sandri dos Santos">
+            <p>Nome: Gabriel Sandri dos Santos<br>RA: 23000380-2</p>
+        </div>
+        <button id="back-to-menu">Voltar ao Menu</button>
+    </div>
+
+    <div id="game-over-container" class="container" style="display: none;">
+        <h2>Você Perdeu!</h2>
+        <p id="game-over-message">Você será redirecionado para a tela de início.</p>
+    </div>
+
+    <div id="final-score-container" class="container" style="display: none;">
+        <h2>Pontuação Final</h2>
+        <p id="final-score-message"></p>
+        <button id="back-to-menu-from-final-score">Voltar ao Menu</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
