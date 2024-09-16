@@ -1,25 +1,33 @@
 package org.example;
 
-public class Reuniao extends Evento {
-    private boolean privada;
+// Classe Reuniao
+class Reuniao extends Evento {
+    private boolean isPrivada;
     private String senha;
 
-    public Reuniao(String nome, String data, boolean privada, String senha) {
+    public Reuniao(String nome, String data, boolean isPrivada, String senha) {
         super(nome, data);
-        this.privada = privada;
-        this.senha = senha;
+        this.isPrivada = isPrivada;
+        this.senha = isPrivada ? senha : null;
     }
 
     public boolean acessarReuniao(String senha) {
-        if (privada) {
-            return this.senha != null && this.senha.equals(senha);
+        if (isPrivada) {
+            if (this.senha.equals(senha)) {
+                System.out.println("Acesso à reunião privado permitido.");
+                return true;
+            } else {
+                System.out.println("Senha incorreta.");
+                return false;
+            }
+        } else {
+            System.out.println("Reunião pública, acesso permitido.");
+            return true;
         }
-        return true; // Acesso permitido se não for privada
     }
 
     @Override
-    public boolean validar() {
-        return getNome() != null && !getNome().isEmpty() && getData() != null && !getData().isEmpty() &&
-                (!privada || (senha != null && !senha.isEmpty()));
+    public void detalhes() {
+        System.out.println("Reunião: " + getNome() + " | Data: " + getData() + " | Tipo: " + (isPrivada ? "Privada" : "Pública"));
     }
 }

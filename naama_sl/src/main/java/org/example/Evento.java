@@ -1,6 +1,11 @@
 package org.example;
 
-public abstract class Evento {
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+// Classe base abstrata
+abstract class Evento {
     private String nome;
     private String data;
 
@@ -17,5 +22,5 @@ public abstract class Evento {
         return data;
     }
 
-    public abstract boolean validar();
+    public abstract void detalhes();
 }

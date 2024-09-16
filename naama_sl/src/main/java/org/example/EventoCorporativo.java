@@ -1,18 +1,16 @@
 package org.example;
 
-public class EventoCorporativo extends Evento {
-    private String sala;
-    private String refeitorio;
+// Classe Evento Corporativo
+class EventoCorporativo extends Evento {
+    private String ambienteReservado;
 
-    public EventoCorporativo(String nome, String data, String sala, String refeitorio) {
+    public EventoCorporativo(String nome, String data, String ambienteReservado) {
         super(nome, data);
-        this.sala = sala;
-        this.refeitorio = refeitorio;
+        this.ambienteReservado = ambienteReservado;
     }
 
     @Override
-    public boolean validar() {
-        return getNome() != null && !getNome().isEmpty() && getData() != null && !getData().isEmpty() &&
-                sala != null && !sala.isEmpty() && refeitorio != null && !refeitorio.isEmpty();
+    public void detalhes() {
+        System.out.println("Evento Corporativo: " + getNome() + " | Data: " + getData() + " | Ambiente: " + ambienteReservado);
     }
 }
